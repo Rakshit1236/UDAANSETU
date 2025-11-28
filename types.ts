@@ -29,6 +29,18 @@ export interface Internship {
   duration: string;
 }
 
+export interface Application {
+  id: string;
+  internshipId: string;
+  studentId: string;
+  status: 'Applied' | 'Shortlisted' | 'Rejected' | 'Accepted';
+  appliedDate: string;
+  studentName?: string; // Denormalized for easier display
+  studentAvatar?: string;
+  studentGpa?: number;
+  jobTitle?: string;
+}
+
 export interface LogbookEntry {
   id: string;
   date: string;
